@@ -1,0 +1,76 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap'); */
+
+@import url('fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Poppins:wght@400;500;600&display=swap');
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'SF Pro Black Italic';
+    src: url('fonts/SFPRODISPLAYBLACKITALIC.OTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro Bold';
+    src: url('fonts/SFPRODISPLAYBOLD.OTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro Heavy Italic';
+    src: url('fonts/SFPRODISPLAYHEAVYITALIC.OTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro Light Italic';
+    src: url('fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro Medium';
+    src: url('fonts/SFPRODISPLAYMEDIUM.OTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro Regular';
+    src: url('fonts/SFPRODISPLAYREGULAR.OTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro Semi-bold Italic';
+    src: url('fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro Thin Italic';
+    src: url('fonts/SFPRODISPLAYTHINITALIC.OTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro Ultra Light Italic';
+    src: url('fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('truetype');
+}
+
+:root {
+    --accent: #6e50fd;
+    --primary: #f4f7ff;
+    --secondary: #ffffff;
+    --primary-2: #16151a;
+    --secondary-2: #1f1e25;
+    --bg-pure: #fff;
+    --font-family: Outfit;
+}
+
+[data-theme=dark] {
+    --accent: #6e50fd;
+    --primary: #16151a;
+    --secondary: #1f1e25;
+    --primary-2: #f4f7ff;
+    --secondary-2: #ffffff;
+    --bg-pure: #000;
+    --font-family: Outfit;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <title>Decimal to Fraction - DivCalc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font Link for Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://pro.Fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/view/css/style.css">
+    <script src="/js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-left">
+                        <i class="fa-duotone fa-code-compare"></i>
+                    </div>
+                    <div class="logo-right">
+                        <span class="logo-text">Div<span class="logo-color">Calc</span></span>
+                    </div>
+                </div>
+                <hr class="divider-line verticle-divider-line">
+                </hr>
+                <div class="header-menu">
+                    <li class="header-item"><a href="#">Home</a></li>
+                    <li class="header-item header-item-dropdown">
+                        <a>About <i class="fa-duotone fa-angle-down"></i></a>
+                        <ul class="header-dropdown about-drop">
+                            <li class="header-dropdown-item">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Developers</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Team</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-item header-item-dropdown">
+                        <a>Features <i class="fa-duotone fa-angle-down"></i></a>
+                        <ul class="header-dropdown features-drop">
+                            <li class="header-dropdown-item">
+                                <a href="#">Blogs</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Calculator</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-item header-item-dropdown">
+                        <a>Calculator <i class="fa-duotone fa-angle-down"></i></a>
+                        <ul class="header-dropdown calculator-drop">
+                            <li class="header-dropdown-item">
+                                <a href="#">Utility</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Finance</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Chemistry</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Maths</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Physics</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Other</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-item header-item-dropdown">
+                        <a>Contact <i class="fa-duotone fa-angle-down"></i></a>
+                        <ul class="header-dropdown contact-drop">
+                            <li class="header-dropdown-item">
+                                <a href="#">Form</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Chat</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Mail</a>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <a href="#">Phone</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main">
+
+            <div class="calculator-title">
+                <h2>Decimal to Fraction</h2>
+            </div>
+            <div class="calculator-area">
+                <div class="input">
+                    <input class="decimal-to-fraction" type="number" id="decimal" placeholder="2.44">
+                </div>
+                <div class="calculator-result">
+                    <div id="result" class="result result-primary">
+                        0
+                    </div>
+                    <div>or</div>
+                    <div class="result result-secondary">
+                        0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+
+
+        const decimalInput = document.getElementById("decimal");
+        const inputContainer = document.querySelector(".input");
+        const resultPrimary = document.querySelector(".result-primary");
+        const resultSecondary = document.querySelector(".result-secondary");
+
+        decimalInput.addEventListener('input', () => {
+            const inputVal = decimalInput.value;
+            const isValidDecimal = /^-?\d+(\.\d+)?$/.test(inputVal);
+
+            if (!isValidDecimal) {
+                inputContainer.classList.add('danger');
+            } else {
+                inputContainer.classList.remove('danger');
+            }
+        });
+
+        decimalInput.addEventListener("input", function () {
+            const decimal = parseFloat(this.value);
+            if (!isNaN(decimal)) {
+                const fraction = toFraction(decimal);
+                resultPrimary.textContent = fraction.numerator + "/" + fraction.denominator;
+                if (fraction.numerator > fraction.denominator) {
+                    const mixedFraction = toMixedFraction(fraction);
+                    resultSecondary.innerHTML = mixedFraction.wholeNumber + "<sup>" + mixedFraction.numerator + "</sup>/<sub>" + mixedFraction.denominator + "</sub>";
+                } else {
+                    resultSecondary.textContent = "0";
+                }
+            } else {
+                resultPrimary.textContent = "0";
+                resultSecondary.textContent = "0";
+            }
+        });
+
+        function toFraction(decimal) {
+            let denominator = 1;
+            while (decimal % 1 !== 0) {
+                decimal *= 10;
+                denominator *= 10;
+            }
+            const numerator = Math.round(decimal);
+            const gcd = findGCD(numerator, denominator);
+            return {
+                numerator: numerator / gcd,
+                denominator: denominator / gcd
+            };
+        }
+
+        function findGCD(a, b) {
+            if (!b) {
+                return a;
+            }
+            return findGCD(b, a % b);
+        }
+
+        function toMixedFraction(fraction) {
+            const wholeNumber = Math.floor(fraction.numerator / fraction.denominator);
+            const numerator = fraction.numerator % fraction.denominator;
+            return {
+                wholeNumber: wholeNumber,
+                numerator: numerator,
+                denominator: fraction.denominator
+            };
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

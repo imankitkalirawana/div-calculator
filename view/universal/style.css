@@ -1,0 +1,103 @@
+header {
+    display: none;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input>i {
+    position: absolute;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-1);
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-out;
+    ;
+    user-select: none;
+}
+
+.input>i:active {
+    background: var(--primary);
+}
+
+#input {
+    outline: none;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    grid-gap: 0.5rem;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 0.5rem;
+}
+
+.row i {
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.btn span {
+    font-size: 1em;
+}
+
+.btn-2 {
+    background: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.btn:hover {
+    border-radius: 50%;
+}
+
+
+
+
+.btn:active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+@media (min-width: 768px) {
+    .btn:hover {
+        border-radius: 40%;
+    }
+}
