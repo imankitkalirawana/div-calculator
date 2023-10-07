@@ -1,215 +1,193 @@
 .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
-    margin-bottom: 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  margin-bottom: 6.25rem;
 }
 
 .banner-left,
 .banner-right {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .banner-left .text-1 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .banner-left .text-2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .banner-bottom {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 1rem;
-    justify-content: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 1rem;
+  justify-content: center;
 }
 
 .banner-right {
-    max-width: 400px;
+  max-width: 400px;
 }
 
 .banner-right img {
-    width: 100%;
+  width: 100%;
 }
-
 
 /* Cards */
 
 .calculator-title {
-    margin: auto;
-    margin-bottom: 2rem;
-    max-width: 1200px;
+  margin: auto;
+  margin-bottom: 2rem;
+  max-width: 1200px;
 }
 
 .calculator {
-    display: flex;
-    max-width: 1200px;
-    margin: auto;
-    grid-gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  grid-gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .calculator-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--secondary);
-    flex-basis: 20%;
-    padding: 1rem;
-    border-radius: 2rem;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: var(--secondary);
+  flex-basis: 20%;
+  padding: 1rem;
+  border-radius: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  min-width: 200px;
 }
 
 .card-img {
-    display: flex;
-    font-size: 30px;
-    background: var(--accent);
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    transition: 0.3s ease;
+  display: flex;
+  font-size: 30px;
+  background: var(--accent);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  transition: 0.3s ease;
 }
 
 .calculator-card:hover .card-img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-
 .card-details {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-title h3 {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  font-weight: 500;
 }
 
 .card-count p {
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--primary-1);
-
-}
-
-
-header {
-    display: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--primary-1);
 }
 
 .calculator {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.input>i {
-    position: absolute;
-    right: 1rem;
-    font-size: 1.5rem;
-    color: var(--primary-1);
-    width: 60px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease-out;
-    ;
-    user-select: none;
+.input > i {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-1);
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-out;
+  user-select: none;
 }
 
-.input>i:active {
-    background: var(--primary);
+.input > i:active {
+  background: var(--primary);
 }
 
 #input {
-    outline: none;
-    width: 100%;
+  outline: none;
+  width: 100%;
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row-reverse;
-    grid-gap: 0.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  grid-gap: 0.5rem;
 }
 
 .operators {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 0.5rem;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 0.5rem;
+  justify-content: space-between;
 }
 
 .numbers {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 0.5rem;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 0.5rem;
+  justify-content: space-between;
 }
 
 .row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 0.5rem;
 }
 
 .row i {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    width: 50px;
-    aspect-ratio: 1;
-    border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 24px; */
+  /* width: 50px; */
+  /* aspect-ratio: 1; */
+  /* border-radius: 50%; */
 }
 
 .btn span {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .btn-2 {
-    background: var(--secondary);
-    border: 1px solid var(--secondary);
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
 }
-
-.btn:hover {
-    border-radius: 50%;
-}
-
-
-
 
 .btn:active {
-    background: var(--primary);
-    border-color: var(--primary);
-}
-
-@media (min-width: 768px) {
-    .btn:hover {
-        border-radius: 40%;
-    }
+  background: var(--primary);
+  border-color: var(--primary);
 }
 
 @media (max-width: 768px) {
-    .calculator {
-        grid-gap: 1.5rem;
-    }
+  .calculator {
+    grid-gap: 1.5rem;
+  }
 }
